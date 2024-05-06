@@ -6,7 +6,7 @@ ENV build-date 30apr2024
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt && pip install opentelemetry-distro opentelemetry-exporter-otlp && opentelemetry-bootstrap -a install
 
 COPY . .
 RUN chmod g+r -R sample-app/wsgi.py ./welcome
