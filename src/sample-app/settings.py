@@ -47,6 +47,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'sample-app.urls'
+DJANGO_SETTINGS_MODULE = 'sample-app.settings'
 
 TEMPLATES = [
     {
